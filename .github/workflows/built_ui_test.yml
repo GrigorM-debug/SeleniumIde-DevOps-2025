@@ -1,7 +1,7 @@
 # This workflow will build a .NET project
 # For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-net
 
-name: Built and UI test
+name: Build and UI test
 
 on:
   push:
@@ -26,6 +26,6 @@ jobs:
       - name: Build
         run: dotnet build --no-restore
         working-directory: 2-SeleniumIDE
-      - name: Test
+      - name: UI Test
         run: dotnet test --no-build --verbosity normal
         working-directory: 2-SeleniumIDE
